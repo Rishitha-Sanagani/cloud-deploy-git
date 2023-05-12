@@ -76,7 +76,7 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy 
-         -Dmule.artifact=$artifactName 
-         -Danypoint.username= ${{secrets.ANYPOINT_USERNAME}}
-         -Danypoint.password=${{secrets.ANYPOINT_PASSWORD}} 
+         -Dmule.artifact=$artifactName /
+         -Danypoint.username= ${{secrets.ANYPOINT_USERNAME}} /
+         -Danypoint.password=${{secrets.ANYPOINT_PASSWORD}} /
          -DskipTests
